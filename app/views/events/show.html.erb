@@ -1,0 +1,39 @@
+<% content_for :title do %>
+  <%= @event.name %> &ndash; <%= @event.date_from.to_s(:cool_date) %>
+<% end %>
+
+<div class="columns mt-6 is-centered">
+
+  <div class="column is-one-third">
+    <nav class="panel is-link">
+      <p class="panel-heading">
+        <%= @event.name %>
+      </p>
+
+       <div class="panel-block">
+         from: <%= @event.date_from %>
+       </div>
+
+        <div class="panel-block">
+          To: <%= @event.date_to %>
+        </div>
+        
+        <div class="panel-block">
+          location: <%= @event.location %>
+        </div>
+
+        <div class="panel-block">
+          contact: <%= @event.contact %>
+        </div>
+    </nav>
+
+  
+  <div class="columns is-mobile">
+    <div class="column">
+      <%= link_to 'Edit', edit_event_path(@event), class: "button is-gray" %> |
+      <%= link_to 'Delete', event_path(@event), method: :delete, data: { confirm: "Are you sure" }, class: "button is-gray" %>
+
+    </div>
+  </div>
+  
+</div>

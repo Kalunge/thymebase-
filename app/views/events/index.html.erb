@@ -1,0 +1,33 @@
+
+
+<% content_for :title do %>
+  Event &ndash; <%= DateTime.now.to_s(:cool_date) %>
+<% end %>
+
+<div class="columns mt-6 is-centered">
+    <% @events.each do |event| %>
+      <div class="column is-one-quarter">
+        <div class="card">
+          <div class="card-header">
+           <p class="card-header-title"> <%= event.name %> </p>
+          </div>
+          <div class="card-content">
+            <div class="content">
+              <p><span class="has-text-weight-bold">Location: <%= event.location %></span></p>
+              <p><span class="has-text-weight-bold">Contact: <%= event.contact %></span></p>
+              <p><span class="has-text-weight-bold">From: <%= event.date_from %> </span> </p>
+              <p><span class="has-text-weight-bold"> To: <%= event.date_to %></span></p>
+                <p><span class="italic"> Logged <%= time_ago_in_words(event.created_at)  %></span> ago</p>
+            </div>
+          </div>
+        
+          <div class="card-footer">
+            <%= link_to 'Show', event, class: "card-footer-item" %>
+            <%= link_to 'Edit', edit_event_path(event), class: "card-footer-item" %>
+            <%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' }, class: "card-footer-item" %>
+          </div>
+        </div>
+
+      </div>
+    <% end %>
+</div>

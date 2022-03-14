@@ -1,0 +1,47 @@
+<%= form_with(model: event) do |form| %>
+  <% if event.errors.any? %>
+    <div id="message is-danger">
+      <div class="message-header">
+        <p> <%= pluralize(event.errors.count, "error") %> prohibited this event from being saved:</>
+      </div>
+
+      <div class="message-body">
+        <ul>
+          <% event.errors.each do |error| %>
+            <li><%= error.full_message %></li>
+          <% end %>
+        </ul>
+      </div>
+
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :date_from, class: "label" %>
+    <%= form.date_select :date_from, class: "input" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :date_to, class: "label" %>
+    <%= form.date_select :date_to, class: "input" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :location, class: "label" %>
+    <%= form.text_field :location, class: "input" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :contact, class: "label" %>
+    <%= form.text_field :contact, class: "input" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :name, class: "label" %>
+    <%= form.text_field :name, class: "input" %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit class: "button is-success" %>
+  </div>
+<% end %>

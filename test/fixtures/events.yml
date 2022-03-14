@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  date_from: 2022-03-14
+  date_to: 2022-03-14
+  location: MyString
+  contact: MyString
+  name: MyString
+
+two:
+  date_from: 2022-03-14
+  date_to: 2022-03-14
+  location: MyString
+  contact: MyString
+  name: MyString
