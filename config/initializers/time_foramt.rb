@@ -1,1 +1,1 @@
-Time::DATE_FORMATS[:] = "%B %e, %Y"
+Time::DATE_FORMATS[:cool_date] = "%B %e, %Y"

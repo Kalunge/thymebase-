@@ -1,0 +1,22 @@
+<h1 class="is-size-2 has-text-weight-bold mb-3 has-text-centered">My Events</h1>
+<div class="colums is-centered mt-6">
+  <div class="column is-half">
+    <% @events.each do |day, events| %>
+      <h3 class="is-size-4 has-text-weight-bold has-text-centered"><%= day %></h3>
+
+      <% events.each do | event | %>
+        <%= link_to event_path(event) do %>
+          <div class="card">
+            <div class="card-content">
+              <strong><%= event.name %></strong><br>
+              Location: <%= event.location %>,
+              Start date: <%= event.date_from %>,
+              End Date: <%= event.date_to %>,
+              contact: <%= event.contact %>
+            </div>
+          </div>
+        <% end %>
+      <% end %>
+    <% end %>
+  </div>
+</div>

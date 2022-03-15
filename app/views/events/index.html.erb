@@ -1,7 +1,7 @@
 
 
 <% content_for :title do %>
-  Event &ndash; <%= DateTime.now.to_s(:cool_date) %>
+  <h1 class="is-size-2 has-text-weight-bold mb-3">Events &ndash; <%= DateTime.now.to_s(:cool_date) %></h1>
 <% end %>
 
 <div class="columns mt-6 is-centered">
@@ -30,4 +30,8 @@
 
       </div>
     <% end %>
+</div>
+
+<div class="columns is-centered mt-6">
+  <%= link_to "View all events", archives_index_path, class: "is-button" %>
 </div>

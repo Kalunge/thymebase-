@@ -3,13 +3,13 @@
 one:
   date_from: 2022-03-14
   date_to: 2022-03-14
-  location: MyString
-  contact: MyString
-  name: MyString
+  location: Nairobi
+  contact: 0713398918
+  name: Fay Weds Tito
 
 two:
   date_from: 2022-03-14
   date_to: 2022-03-14
-  location: MyString
-  contact: MyString
-  name: MyString
+  location: Karen
+  contact: 0713266564
+  name: WIfe's birthday
